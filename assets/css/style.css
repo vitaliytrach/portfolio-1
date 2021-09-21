@@ -1,3 +1,11 @@
+:root {
+    --dark: #004c46;
+    --medium-dark: #128177;
+    --medium: #52948B;
+    --light: #b8c2c8;
+}
+
+
 body {
     margin: 0;
     font-size: 100%;
@@ -5,15 +13,15 @@ body {
 }
 
 #top-header {
-    background-color: #065464;
+    background-color: var(--dark);
     height: 8vh;
     display: flex;
     align-items: center;
 }
 
 #top-header h1 {
-    background-color: #34acbc;
-    color: #212121;
+    background-color: var(--medium);
+    color: white;
     font-size: 250%;
     font-weight: normal;
     position: absolute;
@@ -42,15 +50,31 @@ h2 {
 }
 
 h4 {
-    position: absolute;
-    right: 5%;
     text-align: end;
+    color: white;
+    font-size: 250%;
+    font-weight: lighter;
+}
+
+h5 {
+    color:white;
 }
 
 section {
     display: flex;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+footer {
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    align-items: center;
+}
+
+main {
+    background-color: var(--medium-dark);
 }
 
 #clip {
@@ -69,16 +93,25 @@ section {
     padding-right: 30px;
 }
 
+#nav-items a:hover {
+    color: var(--light);
+}
+
 #top {
-    margin: 2% 4% 2% 2%;
+    background-image: url("../images/coding.jpeg");
+    margin: 0% 4% 2% 2%;
+    height: 600px;
+    position: relative;
+    border-radius: 5px;
+    border: 3px solid var(--dark);
 }
 
 #bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: green;
     justify-content: space-evenly;
+    margin: 0 4% 0 2%;
 }
 
 .container-1 {
@@ -91,23 +124,59 @@ section {
 }
 
 .container-3 {
-    width: 40%;
-    height: 400px;
+    width: 45%;
+    height: 200px;
     margin: 2%;
-    background-color: black;
+    background-image: url("../images/coding.jpeg");
+    position: relative;
+    border-radius: 5px;
+    border: 3px solid var(--dark);
 }
 
-#top img {
+.container-3 img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
+.inner-box {
+    z-index: 1;
+    position: absolute;
+    background-color: var(--dark);
+    bottom: 20px;
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.inner-box h5 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .line {
     width: 5px;
     height: auto;
-    background-color: black;
+    background-color: var(--dark);
     margin-left: 1%;
     margin-right: 2%;
+}
+
+footer .line {
+    height: 100px;
+}
+
+#contact-me-info {
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+
+#contact-me-info a {
+    color: var(--light);
+    font-size: larger;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--light);
 }
 
