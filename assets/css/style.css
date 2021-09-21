@@ -98,6 +98,7 @@ main {
     font-size: 125%;
     color: #ebeff5;  
     padding-right: 30px;
+    text-decoration: none;
 }
 
 #nav-items a:hover {
@@ -207,6 +208,11 @@ footer .line {
 }
 
 #contact-me-info a {
+    text-decoration: none;
+    target: "_blank";
+}
+
+#contact-me-info a {
     color: var(--light-text);
     font-size: larger;
     font-weight: lighter;
@@ -216,3 +222,17 @@ footer .line {
     margin-right: 5%;
 }
 
+@media only screen and (max-width: 900px) {
+    #top-header {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .container-3 {
+        width: 80%;
+    }
+
+    #contact-me-info {
+        flex-direction: column;
+    }
+  }
